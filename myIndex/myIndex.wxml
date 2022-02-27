@@ -1,0 +1,258 @@
+<!-- pages/act/myIndex/myIndex.wxml -->
+<naviBar id="naviBar" title="我的" showBack="{{showBack}}"></naviBar>
+<view class="set-back">
+  <view class="cardFather">
+    <view class="card">
+        <view class="head">
+          <open-data wx:if="{{!userInfo.headImg}}" type="userAvatarUrl" class="headIcon" style="width:180rpx;height:180rpx;"></open-data><!--登录前-->
+          <navigator url="../../uc/userInfo/userInfo" hover-class="none">
+          <image wx:if="{{userInfo.headImg}}" src="{{userInfo.headImg}}" class="headIcon" style="border-radius:100px;width:180rpx;height:180rpx;"></image><!--登录后-->
+        </navigator>
+          <view class="name" wx:if="{{userInfo.nickname}}" bindtap="login">
+          用户名称： {{userInfo.nickname}}
+          </view>
+          <open-data type=userNickName" lang="zh_CN" wx:if="{{!userInfo.nickname}}" class="name"></open-data>
+          <view class="login">{{motto}}
+          </view>
+          <view class="twoflex" hidden="{{!userState}}">
+        <view class="flextext">
+          <navigator url="../scoreIndex/scoreIndex?points={{userState.points}}" hover-class="none">
+            <view class="headNum">积分:{{userState.points}}</view>
+          </navigator>
+        </view>
+        <view class="flextext1">
+          <navigator url="../creditIndex/creditIndex?credit={{userState.credit}}" hover-class="none">
+            <view class="headNum">信用分：{{userState.credit}}</view>
+          </navigator>
+        </view>
+      </view>
+          <navigator url="/pages/act/userSetup/userSetup" hover-class="none">
+          <view class="img3">
+            <image src="/images/actIndex/icon-myindex-04.png" style="width:30px;height:30px;margin-top:5px;margin-bottom:5px;margin-left:5px;margin-right:5px;"></image>
+          </view>
+          <!-- <view class="weui-cell__ft weui-cell__ft_in-access detail"></view> -->
+          </navigator>
+        </view>
+      
+    </view>
+  </view>
+  <!-- 阿清修改，样式使用翔宇版本 -->
+
+  <view class="cell-group">
+    <navigator class="item2" url="../myAct/myAct">
+      <view class="order1" style="text-align:left;">我的活动</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access detail22">全部</view>
+    </navigator>
+  </view>
+<view class="content2">
+  <view class="cell-group" style="background-color:white">
+    <navigator class="item2" url="../myAct/myAct">
+          <view class="img2">
+            <image src="/images/待举办.png" style="width:20px;height:20px;margin-top:17px;"></image>
+          </view>
+          <view class="order2">待举办</view>
+          <!--<view class="weui-cell__ft weui-cell__ft_in-access detail22"></view>-->
+      </navigator>
+      <navigator class="item2" url="../myAct/myAct">
+          <view class="img2">
+            <image src="/images/已完成.png" style="width:20px;height:20px;margin-top:17px;"></image>
+          </view>
+          <view class="order2">已完成</view>
+          <!--<view class="weui-cell__ft weui-cell__ft_in-access detail22"></view>-->
+      </navigator>
+      <navigator class="item2" url="../myAct/myAct">
+          <view class="img2">
+            <image src="/images/我发起.png" style="width:20px;height:20px;margin-top:17px;"></image>
+          </view>
+          <view class="order2">我发起</view>
+      </navigator>
+      <navigator class="item2" url="../feedback/feedback">
+          <view class="img2">
+            <image src="/images/问题反馈.png" style="width:20px;height:20px;margin-top:17px;"></image>
+          </view>
+          <view class="order2">问题反馈</view>
+      </navigator>    
+  </view>
+</view>
+<view class="cell-group">
+    <navigator class="item2" style="text-align:left;" url="../actDiscoverMore/actDiscoverMore">
+      <view class="order3" style="text-align:left;">发现</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access detail22">更多</view>
+    </navigator>
+</view>
+
+
+<view class="content-menu-box">
+  <navigator class='menu-item' hidden="{{site_info_unchecked||register_flag}}" url="/pages/act/findDetail/finddetail?type=5">
+    <view class="menu-item-icon ">
+              <text class="fas fa-university menu-item-icon-text menu-item-icon-1" style="color:#5888E9"></text>
+            </view>
+            <view class="menu-item-icon-name" >
+              <text>场所信息</text>
+            </view>
+          </navigator>
+          <!-- <navigator class='menu-item' hidden="{{club_info_unchecked}}" url="/pages/act/findDetail/finddetail?type=6"> -->
+          <!-- <navigator class='menu-item'  url="/pages/act/findDetail/finddetail?type=6">
+            <view class="menu-item-icon">
+              <text class="material-icons  menu-item-icon-text menu-item-icon-1">people</text>
+            </view>
+            <view class="menu-item-icon-name">
+              <text>社团组织</text>
+            </view>
+          </navigator> -->
+          <navigator class='menu-item'hidden="{{shop_info_unchecked||register_flag}}" url="/pages/act/itemFleaMarket/itemFleaMarket">
+            <view class="menu-item-icon">
+              <text class="material-icons  menu-item-icon-text menu-item-icon-1" style="color:#571212">shopping_basket</text>
+            </view>
+            <view class="menu-item-icon-name">
+              <text>跳蚤市场</text>
+            </view>
+          </navigator>
+
+          <navigator class='menu-item' hidden="{{calendar_info_unchecked}}" url="../naviToArticle/naviToArticle">
+            <view class="menu-item-icon">
+              <text class="material-icons  menu-item-icon-text menu-item-icon-1">date_range</text>
+            </view>
+            <view class="menu-item-icon-name">
+              <text>北航日历</text>
+            </view>
+          </navigator>
+          <navigator class='menu-item' hidden="{{(ministory_info_unchecked||register_flag)}}" url="/pages/act/findDetail/finddetail?type=7">
+            <view class="menu-item-icon">
+              <text class="material-icons  menu-item-icon-text menu-item-icon-1" style="color:#73663E">library_books</text>
+            </view>
+            <view class="menu-item-icon-name">
+              <text>微故事</text>
+            </view>
+          </navigator>
+          <navigator class='menu-item' hidden="{{minipro_info_unchecked}}" target="miniProgram" open-type="navigate" app-id="wxf68a40a9f57c8f3f" path="pages/index/index" version="release">
+            <view class="menu-item-icon">
+              <text class="material-icons  menu-item-icon-text menu-item-icon-1"  >flight</text>
+            </view>
+            <view class="menu-item-icon-name">
+              <text>北航小程序</text>
+            </view>
+          </navigator>
+          <navigator class='menu-item'  url="../pointsExchange/pointsExchange">
+            <view class="menu-item-icon">
+              <text class="material-icons  menu-item-icon-text menu-item-icon-1" style="color:#5B6A85">language</text>
+            </view>
+            <view class="menu-item-icon-name">
+              <text>积分商城</text>
+            </view>
+          </navigator>
+          <navigator class='menu-item' url="/pages/act/out/out?outlink=https://www.buaagsu.com/proposal" hidden="{{challenge14_unchecked}}">
+          <!-- <navigator class='menu-item' bindtap="showalert" hidden="{{challenge14_unchecked}}"> -->
+            <view class="menu-item-icon">
+              <text class="far fa-hand-peace menu-item-icon-text menu-item-icon-1" style="color:#EA8448"></text>
+            </view>
+            <view class="menu-item-icon-name">
+              <text>提案征集</text>
+            </view>
+          </navigator>
+          <navigator class='menu-item' path="/pages/index/index" target="miniProgram" open-type='navigate' app-id="wx8e9b173cdb33c274" hidden="{{offeryes_unchecked}}">
+            <view class="menu-item-icon">
+              <image class = "menu-item-icon-text .menu-item-icon-img-1"  src="/images/OfferYes.jpg"></image>
+            </view>
+            <view class="menu-item-icon-name">
+              <text>OfferYes</text>
+            </view>
+          </navigator>
+    </view>
+
+
+  <button class="button-style " wx:if="{{!hasUserInfo}}" bindgetuserinfo='login' open-type='getUserInfo'>
+    点击登录
+  </button>
+  <button class="button-style2 " type="plain " wx:if="{{hasUserInfo}}" bindtap="logout">
+    退出登录
+  </button>
+  <!-- 翔宇 -->
+  <view class="content2" wx:if="{{adminShow}}">
+    <view class="hr2"></view>
+    <view class="cell-group">
+      <navigator url="../../uc/userToAudit/userToAudit">
+        <view class="item2" style="border-bottom: 1px solid #dcdcdc;">
+          <view class="img2">
+            <image src="/images/actIndex/icon-audit-grey.png" style="width:20px;height:20px;margin-top:17px;"></image>
+          </view>
+          <view class="order2">账户审核</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access detail22"></view>
+        </view>
+      </navigator>
+      <navigator url="../../uc/userAudited/userAudited">
+        <view class="item2" style="border-bottom: 1px solid #dcdcdc;">
+          <view class="img2">
+            <image src="/images/actIndex/icon-uc-audited-grey.png" style="width:20px;height:20px;margin-top:17px;"></image>
+          </view>
+          <view class="order2">审核记录</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access detail22"></view>
+        </view>
+      </navigator>
+      <navigator url="../actAudit/actAudit">
+        <view class="item2" style="border-bottom: 1px solid #dcdcdc;">
+          <view class="img2">
+            <image src="/images/actIndex/icon-act-audit-grey.png" style="width:20px;height:20px;margin-top:17px;"></image>
+          </view>
+          <view class="order2">活动审核</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access detail22"></view>
+        </view>
+      </navigator>
+      <!-- 功能待添加 -->
+      <!-- <navigator url="../actCommentAudit/actCommentAudit">
+      <view class="item2" style="border-bottom: 1px solid #dcdcdc;">
+        <view class="img2">
+          <image src="/images/actIndex/icon-act-comment-grey.png" style="width:20px;height:20px;"></image>
+        </view>
+        <view class="order2">评论审核</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access detail22"></view>
+      </view>
+    </navigator> -->
+      <navigator url="../actDelete/actDelete">
+        <view class="item2" style="border-bottom: 1px solid #dcdcdc;">
+          <view class="img2">
+            <image src="/images/actIndex/icon-act-delete-grey.png" style="width:20px;height:20px;margin-top:17px;"></image>
+          </view>
+          <view class="order2">删除活动</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access detail22"></view>
+        </view>
+      </navigator>
+      <navigator url="../swiperSet/swiperSet">
+        <view class="item2" style="border-bottom: 1px solid #dcdcdc;">
+          <view class="img2">
+            <image src="/images/actIndex/icon-act-swiper-grey.png" style="width:20px;height:20px;margin-top:17px;"></image>
+          </view>
+          <view class="order2">轮播设置</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access detail22"></view>
+        </view>
+      </navigator>
+      <!-- <navigator url="../disSet/disSet">
+        <view class="item2" style="border-bottom: 1px solid #dcdcdc;">
+          <view class=" img2 ">
+            <image src="/images/actIndex/icon_uc_clean2-grey.png " style="width:20px;height:20px;margin-top:17px; "></image>
+          </view>
+          <view class="order2 ">发现设置</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access detail22 "></view>
+        </view>
+      </navigator> -->
+      <navigator url="/pages/uc/pointsExchangeAadmin/pointsExchangeAadmin">
+        <view class="item2 ">
+          <view class="img2 ">
+            <image src="/images/actIndex/icon-uc-money.png" style="width:20px;height:20px;margin-top:17px; "></image>
+          </view>
+          <view class="order2 ">商品兑换</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access detail22 "></view>
+        </view>
+      </navigator>
+
+    </view>
+  </view>
+  <!-- <view class="btn-area ">
+  <navigator url="/pages/act/register/register?title=navigate " hover-class="navigator-hover ">测试注册页面
+  </navigator>
+</view> -->
+
+
+  <view style="height:5px; "></view>
+</view>
+<tBar id="f-bar" idx="4"></tBar>

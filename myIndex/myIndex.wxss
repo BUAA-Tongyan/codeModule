@@ -1,0 +1,351 @@
+/* pages/act/myIndex/myIndex.wxss */
+
+.set-back {
+  background-color: #f8f8ff;
+  height: 100vh;/*当前屏幕的100%高度*/
+}
+
+.cardFather {
+  font-family: "Microsoft YaHei";
+  background-color: #f8f8ff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card {
+  width: 94%;
+  margin-left: 3%;
+  height: 150px;
+  /* background-color: #fff; */
+  /*背景颜色*/
+ box-shadow: 0 0 2px #888;
+ /* 边框*/
+  border-radius: 10px; 
+  /* 边框圆角*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+}
+
+.headIcon {
+  margin: 10%;
+}
+
+.detail {
+  font-size: 15px;
+  position: absolute;
+  line-height: 100px;
+  right: 30px;
+  height: 90px;
+  color: #888;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.order {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  font-size: 15px;
+}
+
+.detail2 {
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+  height: 50px;
+  line-height: 50px;
+  color: #888;
+}
+
+.line {
+  border: 1px solid #ccc;
+  opacity: 0.2;
+}
+.flextext {
+  width: 133%;
+  text-align: center;
+  font-size: 150px;/*字体大小*/
+  font-weight: bold;
+  line-height: 20px;/*行间距*/
+  border-right: 2px solid #ccc;
+  color: #888;
+}
+
+.flextext1 {
+  /* right：10px； */
+  width: 133%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #888;
+  
+}
+
+.twoflex {
+  /* background-color: rgb(240, 230, 230); */
+  display: block;
+  position: absolute;
+  right: 67px;
+  width: 54%;
+  height: 20px;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  color: #888;
+} 
+
+.img {
+  margin-left: 10px;
+  line-height: 50px;
+}
+
+.hr {
+  height: 10px;
+  background-color: #f5f5f5;
+}
+
+.bg {
+  width: 100%;
+  height: 150px;
+  background-color: #d53e37;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+}
+
+.headIcon {
+  margin: 10px 10px 10px 40rpx;
+  /* 上右下左 */
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.order {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  font-size: 15px;
+}
+
+.line {
+  /* line */
+  border: 1px solid #ccc;
+  opacity: 0.2;
+}
+
+.desc {
+  width: 33%;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  line-height: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  /* line-height: 70px; */
+  margin-top: 40px;
+  position: absolute;
+  left: 275rpx;
+}
+
+.login {
+  color: #888;
+  font-size: 12px;
+  position: absolute;
+  left: 275rpx;
+  margin-top: 20px;
+  border-color: #5cd537;
+}
+
+.count {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.img {
+  margin-left: 10px;
+  line-height: 50px;
+}
+
+.img3 {
+  /* background-color: rgb(240, 230, 230); */
+  display: block;
+  position: absolute;
+  right: 35rpx;
+  /* margin-top: 10px; */
+  /* margin-right: 10px;
+  line-height: 50px; */
+}
+
+.content2 {
+  width: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  font-family: "Microsoft YaHei";
+  /* 背景颜色 background-color: #5454e0;*/
+  
+  margin-bottom: 20rpx;
+}
+
+.hr2 {
+  height: 10px;
+  /* 背景颜色 */
+  background-color: #f8f8ff;
+}
+
+.cell-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 3%;
+  margin-right: 3%;
+  /*box-shadow: 0 0 2px #888;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #dcdcdc;*/
+}
+
+.item2 {
+  align-items: center;
+  display: flex;
+  width: 25%;
+  text-align: center;
+  flex-direction: column;
+}
+
+.img2 {
+  display: block;
+  margin-left: 10px;
+  /* margin-right: 5px; */
+  line-height: 10px;
+}
+.order1{
+  padding-top: 14px;
+  padding-left: 15px; 
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.order2 {
+  /* 15——>10 */
+  padding-top: 14px;
+  padding-left: 10px;
+  font-size: 25rpx;
+  letter-spacing: 1px;
+}
+.order3{
+  padding-top: 14px;
+  padding-right: 20px; 
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 30rpx;
+}
+/*
+.content-menu-back {
+  flex:1;
+  background-color: #ffffff ;
+  width: 700rpx;
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
+  margin:20rpx 25rpx 50rpx;
+}*/
+.content-menu-box {
+  width: auto;
+  margin-left: 3%;
+  margin-right: 3%;
+  display: flex;  
+  flex-direction:row;
+  /*padding: 60rpx 70rpx 0rpx;*/
+  flex-wrap: wrap;
+  
+}
+.menu-item {
+  height:0rpx;
+  width:25%;
+  padding-bottom: 20%;
+  /* border:3rpx solid #bbb6b6; */
+  flex-direction:column;
+  text-align: center;
+  margin-bottom: 25px;
+  border:1;
+}
+.menu-item-icon {
+  /* margin-bottom: -10rpx; */
+  height: 30px;
+  width: 100%;
+  position: relative;
+}
+.menu-item-icon-1{
+  width:100%;
+  font-size:27px;
+}
+.menu-item-icon-img-1{
+  height: 30px;
+  width: 30px;
+  padding:0 auto;
+  font-size:27px;
+}
+.menu-item-icon-name {
+  width:100%;
+  margin-top: 10rpx;
+  flex: 1;
+  font-size: 25rpx;
+  align-content: center;
+}
+.detail22 {
+  font-size: 15px;
+  position: absolute;
+  right: 30px;
+  height: 50px;
+  line-height: 50px;
+  color: #888;
+}
+
+.button-style {
+  width: 94%;
+  margin-bottom: 30rpx;
+  margin-top: 30rpx;
+  background-color: #4285f4;
+  color: #fff;
+}
+
+.button-style::after {
+  border: 0;
+}
+
+.button-style_hover {
+  background-color: #4285ff;
+}
+
+.button-style2 {
+  width: 94%;
+  margin-bottom: 30rpx;
+  margin-top: 30rpx;
+  background-color: #dedede;
+  color: white;
+}
+
+.headNum {
+  font: bold;
+  font-size: 30rpx;
+}

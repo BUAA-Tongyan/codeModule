@@ -1,0 +1,37 @@
+<naviBar id="naviBar" title="设置"></naviBar>
+<!-- <view class="cardFather"> -->
+
+  <view class="content2">
+    <view class="hr2"></view>
+    <view class="cell-group">
+      <navigator url="/pages/uc/userInfo/userInfo">
+        <view class="item2" style="border-bottom: 1px solid #dcdcdc;">
+          <view class="img2">
+            <image src="/images/actIndex/icon-myindex-01.png" style="width:20px;height:20px;margin-top:17px;"></image>
+          </view>
+          <view class="order2">我的信息</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access detail22"></view>
+        </view>
+      </navigator>
+      <navigator url="/pages/act/aboutTongyan/aboutTongyan">
+        <view class="item2" style="border-bottom: 1px solid #dcdcdc;">
+          <view class="img2">
+            <image src="/images/actIndex/icon-lab.png" style="width:20px;height:20px;margin-top:17px;"></image>
+          </view>
+          <view class="order2">关于同研</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access detail22"></view>
+        </view>
+      </navigator>
+      <navigator url="/pages/uc/userStyleChange/userStyleChange">
+        <view class="item2 ">
+          <view class="img2 ">
+            <!-- <image src="/images/actIndex/icon-uc-money.png" style="width:20px;height:20px;margin-top:17px; "></image> -->
+            <i class = "fab fa-superpowers" style="width:20px;height:20px;margin-top:17px;color:#BDC2CA;font-size:20px "></i>
+          </view>
+          <view class="order2 ">风格切换</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access detail22"></view>
+        </view> 
+      </navigator>
+    </view>
+  </view>
+<!-- </view> -->
