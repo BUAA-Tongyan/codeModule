@@ -208,8 +208,8 @@
 
 .hr2 {
   height: 10px;
-  /* 背景颜色 */
-  background-color: #f8f8ff;
+  /* 背景颜色background-color: #f8f8ff; */
+  
 }
 
 .cell-group {
